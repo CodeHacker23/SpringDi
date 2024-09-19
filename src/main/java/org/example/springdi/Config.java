@@ -15,7 +15,7 @@ public class Config { // условно мезаник который заста
     }
 
     @Bean
-    public Engine engine2(){
+    public Engine engine(){
         return new Engine("F16D3");
 
     }
@@ -26,8 +26,8 @@ public class Config { // условно мезаник который заста
     }
 
     @Bean
-    public  Auto auto2(){
-        return  new Auto("Auto2", engine2());
+    public  Auto auto2(Engine engine){ // вот так можно передавать сразу в параметр, лучше использовать сразу вот такой способ
+        return  new Auto("Auto2", engine);
 
     }
 
